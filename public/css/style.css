@@ -1,0 +1,129 @@
+body {
+    font-size: 18px;
+}
+.chat-row {
+    margin: 15px 20px 10px 20px;
+}
+
+.chat-user-list {
+    list-style: none;
+    height: auto !important;
+}
+
+#chatBody {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.name-image {
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+    border-radius: 50%;
+    font-weight: bold;
+    padding-top: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.chat-image, .chat-name {
+    display: inline-block;
+}
+
+.chat-user-list {
+    margin-bottom: 2px;
+    padding: 5px;
+    height: 50px;
+}
+
+.chat-user-list.active {
+    background: #e4e4e4;
+}
+
+.user-status-icon {
+    position: absolute;
+    top: 22px;
+    left: 28px;
+    color: grey;
+}
+
+.chat-image {
+    position: relative;
+}
+
+.chat-header {
+    min-height: 60px;
+    padding: 10px;
+    margin-bottom: 2px;
+    background: #ffffff;
+    border: 1px solid lightgray;
+}
+
+.chat-body {
+    border: 1px solid lightgray;
+    overflow: scroll;
+    background: #ffffff;
+    padding: 30px 50px;
+    margin-bottom: 20px;
+}
+
+.message-listing {
+    height: 150px; 
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.message-text {
+    margin-left: 45px;
+    margin-top: -10px;
+}
+
+.chat-input {
+    border: 1px solid lightgray;
+    background-color: #ffffff;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 8px 10px;
+}
+
+.chat-input-toolbar {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 8px 10px;
+}
+
+.chat-input-toolbar .tool-items {
+    margin-right: 5px;
+    opacity: 0.3;
+}
+
+.users-list,.current-group {
+    max-height: 300px !important;
+    overflow: scroll;
+}
+
+.users-list-home-page {
+    max-height: 400px !important;
+    overflow: scroll;
+}
+
+.groups {
+    margin-top: 15px;
+}
+
+.send-button {
+    margin-top: 10px;
+}
+
+.home_page_image {
+    margin-top: 10px;
+    width: 100%;
+    object-fit: cover;    
+}
+
+@media (min-width: 1px) and (max-width: 767px) {
+    #users-list-parent,#current-group-parent {
+        margin-top: 15px;
+    }
+}
