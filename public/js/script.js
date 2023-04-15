@@ -7,7 +7,7 @@ socket.on('connect',function() {
     socket.emit('user_connected',user_id);
 });
 
-// receive a message
+// receive a message (socket.io)
 socket.on('updateUserStatus',(data) => {
     let $userStatusIcon = $('.user-status-icon');
     $userStatusIcon.removeClass('text-success');
