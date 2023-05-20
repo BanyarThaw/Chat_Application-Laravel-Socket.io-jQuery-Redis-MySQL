@@ -25,8 +25,10 @@ Auth::routes([
     'verify' => false,
 ]);
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/conversation/{userId}',[MessageController::class,'conversation'])->name('message.conversation');
-Route::post('/send-message',[MessageController::class,'sendMessage'])->name('message.send-message');
-Route::post('/send-group-message',[MessageController::class,'sendGroupMessage'])->name('message.send-group-message');
-Route::resource('message-groups',MessageGroupController::class);
+Route::group(['middleware' => 'AuthAdmin'], function() {
+	Route::get('/home', [HomeController::class, 'index'])->name('home');
+	Route::get('/conversation/{userId}',[MessageController::class,'conversation'])->name('message.conversation');
+	Route::post('/send-message',[MessageController::class,'sendMessage'])->name('message.send-message');
+	Route::post('/send-group-message',[MessageController::class,'sendGroupMessage'])->name('message.send-group-message');
+	Route::resource('message-groups',MessageGroupController::class);
+});

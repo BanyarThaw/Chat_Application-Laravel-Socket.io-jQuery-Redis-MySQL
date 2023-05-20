@@ -1,5 +1,5 @@
 let user_id = $("#auth_id").val();
-let ip_address = '127.0.0.1';
+let ip_address = '13.212.230.88';
 let socket_port = '8005';
 let socket = io(ip_address + ':' + socket_port);
 

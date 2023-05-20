@@ -25,6 +25,7 @@ redis.subscribe('group-channel',function() {
 
 redis.on('message',function(channel, message) {
     message = JSON.parse(message);
+	console.log(message);
     if(channel == 'private-channel') {
         let data = message.data.data;
         let receiver_id = data.receiver_id;
@@ -48,6 +49,7 @@ io.on("connection", (socket) => {
     socket.on("user_connected",(user_id) => {
         users[user_id] = socket.id;
         io.emit('updateUserStatus',users);
+	console.log('connected_user'+user_id);
     });
 
     socket.on('disconnect',() => {
